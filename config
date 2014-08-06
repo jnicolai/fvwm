@@ -404,6 +404,7 @@ AddToMenu RootPrograms
 + "&GIMP"         Exec exec gimp
 + "G&Vim"         Exec exec gvim
 + "&IceWeasel"    Exec exec iceweasel
++ "&KeePassX"     Exec exec keepassx
 + "&Leafpad"      Exec exec leafpad
 + "Libre&Office"  Exec exec libreoffice
 + "LX&appearance" Exec exec lxappearance
