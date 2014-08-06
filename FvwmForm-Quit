@@ -1,0 +1,21 @@
+DestroyModuleConfig FvwmForm-Quit: *
+*FvwmForm-Quit: WarpPointer
+*FvwmForm-Quit: Colorset 10
+*FvwmForm-Quit: ItemColorset 11
+*FvwmForm-Quit: Title "Quit Fvwm?"
+*FvwmForm-Quit: Line expand
+*FvwmForm-Quit: Text "QUIT Fvwm?"
+*FvwmForm-Quit: Line center
+*FvwmForm-Quit: TimeoutFont "xft:DejaVu Sans-8:style=oblique"
+*FvwmForm-Quit: Timeout 30 quit "Fvwm will logout in %% seconds."
+*FvwmForm-Quit: Line center
+*FvwmForm-Quit: Button quit "Quit" ^M
+*FvwmForm-Quit: Command quit
+*FvwmForm-Quit: Button quit "Suspend"
+*FvwmForm-Quit: Command Exec exec gksudo pm-suspend
+*FvwmForm-Quit: Button quit "Reboot"
+*FvwmForm-Quit: Command Exec exec gksudo "shutdown -r now"
+*FvwmForm-Quit: Button quit "Halt"
+*FvwmForm-Quit: Command Exec exec gksudo "shutdown -h now"
+*FvwmForm-Quit: Button quit "Cancel" ^[
+*FvwmForm-Quit: Command nop

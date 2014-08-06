@@ -1,0 +1,13 @@
+DestroyModuleConfig FvwmForm-RenameDesktop: *
+*FvwmForm-RenameDesktop: WarpPointer
+*FvwmForm-RenameDesktop: Colorset 10
+*FvwmForm-RenameDesktop: ItemColorset 11
+*FvwmForm-RenameDesktop: Title "Rename Current Desktop"
+*FvwmForm-RenameDesktop: Line expand
+*FvwmForm-RenameDesktop: Text "New Name:"
+*FvwmForm-RenameDesktop: Input NewName 20 "$[desk.name$[desk.n]]"
+*FvwmForm-RenameDesktop: Line right
+*FvwmForm-RenameDesktop: Button quit "Cancel" ^[
+*FvwmForm-RenameDesktop: Command Nop
+*FvwmForm-RenameDesktop: Button quit "Rename" ^M
+*FvwmForm-RenameDesktop: Command Function ChangeDesktopName "$(NewName)"

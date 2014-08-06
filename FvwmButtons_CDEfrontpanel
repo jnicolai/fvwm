@@ -1,0 +1,18 @@
+Colorset 33 bg #767676,hi #000000,sh #000000
+DestroyModuleConfig CDEpanel: *
+*CDEpanel: BoxSize smart
+*CDEpanel: Colorset 10
+*CDEpanel: PressColorset 33
+*CDEpanel: Frame 1
+*CDEpanel: ButtonGeometry 16x16
+*CDEpanel: Padding 1 1
+*CDEpanel: Rows 5
+*CDEpanel: (4x1)
+*CDEpanel: (4x1)
+*CDEpanel: (4x1)
+*CDEpanel: (4x1)
+*CDEpanel: (8x5,Swallow (UseOld,NoKill) "FvwmPager" "Module FvwmPager * *")
+*CDEpanel: (4x4,Swallow XClock "Exec exec xclock")
+*CDEpanel: (4x4,Action (Mouse 1) "Exec exec xterm",Icon 48terminal.png)
+*CDEpanel: (4x4,Action (Mouse 1) "Exec exec pcmanfm",Icon 48nitrogen.png)
+*CDEpanel: (4x4,Action (Mouse 1) "Exec exec leafpad",Icon 48leafpad.png)

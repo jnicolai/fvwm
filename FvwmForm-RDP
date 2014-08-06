@@ -1,0 +1,23 @@
+DestroyModuleConfig FvwmForm-RDP: *
+*FvwmForm-RDP: WarpPointer
+*FvwmForm-RDP: Colorset 10
+*FvwmForm-RDP: ItemColorset 11
+*FvwmForm-RDP: Title "Remote Desktop Connection (RDP)"
+*FvwmForm-RDP: Line expand
+*FvwmForm-RDP: Text "Server:"
+*FvwmForm-RDP: Input serverAddr 20
+*FvwmForm-RDP: Line expand
+*FvwmForm-RDP: Text "Domain:"
+*FvwmForm-RDP: Input serverDomain 20
+*FvwmForm-RDP: Text "Username:"
+*FvwmForm-RDP: Input serverUser 20
+*FvwmForm-RDP: Line left
+*FvwmForm-RDP: Text "Attach to Console:"
+*FvwmForm-RDP: Selection serverConsole single
+*FvwmForm-RDP: Choice srvConTrue "true" on "Yes"
+*FvwmForm-RDP: Choice srvConFalse "false" off "No"
+*FvwmForm-RDP: Line right
+*FvwmForm-RDP: Button quit "Cancel" ^[
+*FvwmForm-RDP: Command Nop
+*FvwmForm-RDP: Button quit "Connect" ^M
+*FvwmForm-RDP: Command Exec exec rdesktop -g 1024x768 -K $(srvConTrue?-0) $(serverUser?-u $(serverUser)) $(serverDomain?-d $(serverDomain)) $(serverAddr)

@@ -1,0 +1,13 @@
+DestroyModuleConfig FvwmForm-VNC: *
+*FvwmForm-VNC: WarpPointer
+*FvwmForm-VNC: Colorset 10
+*FvwmForm-VNC: ItemColorset 11
+*FvwmForm-VNC: Title "VNC Connection"
+*FvwmForm-VNC: Line expand
+*FvwmForm-VNC: Text "Server:"
+*FvwmForm-VNC: Input serverAddr 20
+*FvwmForm-VNC: Line right
+*FvwmForm-VNC: Button quit "Cancel" ^[
+*FvwmForm-VNC: Command Nop
+*FvwmForm-VNC: Button quit "Connect" ^M
+*FvwmForm-VNC: Command Exec exec vncviewer -passwd ~/.vncpasswd $(serverAddr)
