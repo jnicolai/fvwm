@@ -434,7 +434,7 @@ DestroyFunc StartFunction
 AddToFunc StartFunction
 + I Module FvwmPager * *
 + I Test (Init) Exec exec xclock -name xcdigital -g -0+0
-+ I Test (Init) Exec exec xload -g 140x68-0+35
++ I Test (Init) Exec exec xload
 
 ###############################################################################
 DestroyFunc WindowListFunc
