@@ -433,7 +433,7 @@ AddToMenu TerminalSizes
 DestroyFunc StartFunction
 AddToFunc StartFunction
 + I Module FvwmPager * *
-+ I Test (Init) Exec exec xclock -name xcdigital -g -0+0
++ I Test (Init) Exec exec xclock -name xcdigital
 + I Test (Init) Exec exec xload
 
 ###############################################################################
