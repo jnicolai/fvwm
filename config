@@ -109,7 +109,7 @@ Style * IconBackgroundColorset 8
 Style * Icon
 
 # Module Styles
-Style FvwmPager Sticky,WindowListSkip,FixedSize,NoButton 2,NoButton 1
+Style FvwmPager Sticky,WindowListSkip,FixedSize,NoButton 2,NoButton 1,!Title,!Handles
 Style FvwmPager IconOverride, Icon odesk.xpm
 Style FvwmIconMan Sticky,!Title,WindowListSkip,!Handles,NeverFocus
 
@@ -201,7 +201,6 @@ Key Up 		A 4S Function FollowWindowToPage  0p -1p
 Key Right 	A 4S Function FollowWindowToPage  1p  0p
 Key Down 	A 4S Function FollowWindowToPage  0p  1p
 
-
 # Multimedia Controls
 Key XF86AudioRaiseVolume A N Exec exec amixer -- set Master 3dB+
 Key XF86AudioLowerVolume A N Exec exec amixer -- set Master 3dB-
@@ -234,10 +233,6 @@ Key S A 4 ResizeMove 50 50 50-50w 50-50w Warp
 
 Key Return A 4 Current Function MasterTile 
 
-# Terminal Manipulation
-Mouse 3 W 4 Current (URxvt|XTerm) PopUp TerminalSizes
-Key space WTSF 4 Current (URxvt|XTerm) Menu TerminalSizes Interior c c
-
 Key F12 A C All (XClock|XLoad|Fvwm*|XOsview) RaiseLower
 
 Key Menu A N Menu DesktopRootMenu Root c c
@@ -266,7 +261,6 @@ Key J A 4 Direction South (CurrentPage,AcceptsFocus) Focus
 Key K A 4 Direction North (CurrentPage,AcceptsFocus) Focus
 Key L A 4 Direction East  (CurrentPage,AcceptsFocus) Focus
 
-
 # Window List
 Key Tab A 4  Next (!Iconic,AcceptsFocus,CurrentPage) Function WindowFocusAndRaise
 Key Tab A 4S Prev (!Iconic,AcceptsFocus,CurrentPage) Function WindowFocusAndRaise
@@ -292,7 +286,6 @@ Mouse 1 R A Menu DesktopRootMenu
 Mouse 2 R A Menu WindowOps
 Mouse 3 R A WindowList NoCurrentDeskTitle,TitleForAllDesks
 Mouse 3 R 4 WindowList CurrentDesk,OnlyIcons
-#Mouse 3 R A Popup RootWorkspace
 
 Mouse 1 W M Function WindowMoveOrRaiseLower
 Mouse 3 W M Function WindowResize
@@ -312,7 +305,6 @@ Mouse 3 I N Popup WindowOPS
 # Windows Operations Menu
 DestroyMenu WindowOPS
 AddToMenu WindowOPS
-+ ""                     TearMenuOff
 + "&Stick"               Stick
 + "&Move"                Move
 + "&Resize"              Resize
@@ -336,7 +328,7 @@ DestroyMenu DesktopRootMenu
 AddToMenu DesktopRootMenu
 PipeRead "echo -n \"+ $(hostname) Title Top\""
 + "&1. XTerm"      Exec exec xterm
-+ "&2. Chromium"   Exec exec chromium
++ "&2. Firefox"    Exec exec firefox
 + "&3. PCManFM"    Exec exec pcmanfm
 + ""               Nop
 + "&Programs"      Popup RootPrograms
@@ -414,15 +406,6 @@ AddToMenu RootPrograms
 + "xclip&board"   Exec exec xclipboard
 + "x&man"         Exec exec xman
 + "X&pdf"         Exec exec xpdf
-
-DestroyMenu TerminalSizes
-AddToMenu TerminalSizes
-+ "Terminal Sizes" Title
-+ "&1. 80x24"          Current (URxvt|XTerm) Resize 80c 24c
-+ "&2. 80x50"          Current (URxvt|XTerm) Resize 80c 50c
-+ "&3. 100x50"         Current (URxvt|XTerm) Resize 100c 50c
-+ "&4. 132x43"         Current (URxvt|XTerm) Resize 132c 43c
-+ "&5. 132x60"         Current (URxvt|XTerm) Resize 132c 60c
 
 ###############################################################################
 #                                                                     FUNCTIONS
@@ -506,11 +489,6 @@ AddToFunc QuickTile
 + I ResizeMove Frame $[*]
 + I WarpToWindow 50 50
 
-DestroyFunc ToggleModule
-AddToFunc ToggleModule
-+ I All ($0) KillModule $0
-+ I TestRc (NoMatch) Module $*
-
 DestroyFunc ChangeDesktopName
 AddToFunc ChangeDesktopName
 + I DesktopName $[desk.n] $0
@@ -545,9 +523,10 @@ DestroyModuleConfig FvwmPager: *
 #*FvwmPager: SolidSeparators
 #*FvwmPager: MiniIcons
 *FvwmPager: UseSkipList
-*FvwmPager: Font None
-#*FvwmPager: Font "xft:DejaVu Sans-8:style=Book"
+#*FvwmPager: Font None
+*FvwmPager: Font "xft:DejaVu Sans-8:style=Book"
 *FvwmPager: SmallFont "xft:DejaVu Sans-6:style=book"
+#*FvwmPager: SmallFont None
 *FvwmPager: WindowLabelFormat %c
 *FvwmPager: DeskHilight
 *FvwmPager: BalloonFont "xft:DejaVu Sans-8:slant=oblique"
