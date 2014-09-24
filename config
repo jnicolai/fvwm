@@ -40,15 +40,15 @@ BugOpts FlickeringMoveWorkAround On
 #                                                                     COLORSETS
 ###############################################################################
 # Default Colorset
-ColorSet 0  bg #c4c4c4,fg #000000,sh #6c6c6c, hi #e6e6e6
+ColorSet 0  bg #dcdad5,fg #000000,sh #9e9a91, hi #e6e6e6
 
 # Windows
-ColorSet 1  bg #d3d3d3,fg #000000
-ColorSet 2  bg #5f9ea0,fg #ffffff
+ColorSet 1  bg #9c9a94,fg #000000
+ColorSet 2  bg #4b6983,fg #ffffff
 
 # Menus
-ColorSet 5  bg #c4c4c4,fg #000000,hi #e6e6e6, sh #6c6c6c
-ColorSet 6  bg #a7a7a7,fg #000000
+ColorSet 5  bg #dcdad5,fg #000000,hi #9e9a91, sh #9e9a91
+ColorSet 6  bg #4b6983,fg #ffffff
 ColorSet 7  fg #6c6c6c
 
 # Icon Colorset
@@ -61,8 +61,8 @@ ColorSet 10 bg #c4c4c4,fg #000000
 ColorSet 11 bg #c4c4c4,fg #000000,sh #6c6c6c,hi #e6e6e6
 
 # FvwmPager
-ColorSet 14 bg #a7a7a7,fg #000000
-ColorSet 15 bg #e6e6e6,fg #000000
+ColorSet 14 bg #c4c2bd,fg #000000
+ColorSet 15 bg #dcdad5,fg #000000
 ColorSet 16 bg #e6e6e6,fg #000000
 
 ###############################################################################
@@ -70,14 +70,14 @@ ColorSet 16 bg #e6e6e6,fg #000000
 ###############################################################################
 DefaultColorset 0
 DefaultFont "xft:DejaVu Sans Mono-10"
-TitleStyle Centered Height 17
+TitleStyle Centered Height 20
 Emulate Mwm
 BorderStyle Simple
 DefaultIcon mwm_unknown_trans.png
 
 Style * MwmButtons,MwmBorder
 Style * MwmFunctions,MwmDecor
-Style * HandleWidth 7,BorderWidth 7
+Style * HandleWidth 4,BorderWidth 4
 Style * Colorset 1
 Style * HilightColorset 2
 Style * BorderColorset 1
@@ -129,6 +129,8 @@ Style rdesktop MiniIcon 16x16/places/network-server.png
 MenuStyle * Mwm
 MenuStyle * Font "xft:DejaVu Sans Mono-10"
 MenuStyle * TitleFont "xft:DejaVu Sans Mono-10"
+MenuStyle * HilightBack
+MenuStyle * Hilight3DOff
 MenuStyle * TrianglesSolid
 MenuStyle * TrianglesUseFore
 MenuStyle * MenuColorset 5
