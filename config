@@ -41,9 +41,10 @@ BugOpts FlickeringMoveWorkAround On
 ###############################################################################
 # Default Colorset
 ColorSet 0  bg #dcdad5,fg #000000,sh #9e9a91, hi #e6e6e6
+ColorSet 32 bg #ff0000,fg #00ff00
 
 # Windows
-ColorSet 1  bg #9c9a94,fg #000000
+ColorSet 1  bg #c4c2bd,fg #000000
 ColorSet 2  bg #4b6983,fg #ffffff
 
 # Menus
@@ -61,7 +62,7 @@ ColorSet 10 bg #c4c4c4,fg #000000
 ColorSet 11 bg #c4c4c4,fg #000000,sh #6c6c6c,hi #e6e6e6
 
 # FvwmPager
-ColorSet 14 bg #c4c2bd,fg #000000
+ColorSet 14 bg #9c9a94,fg #000000
 ColorSet 15 bg #dcdad5,fg #000000
 ColorSet 16 bg #e6e6e6,fg #000000
 
@@ -124,6 +125,8 @@ Style XTerm MiniIcon 16x16/apps/terminal.png
 Style XTerm Icon 48x48/apps/terminal.png
 Style rdesktop Icon 48x48/places/network-server.png
 Style rdesktop MiniIcon 16x16/places/network-server.png
+
+Style * NoIcon
 
 # MenuStyle
 MenuStyle * Mwm
@@ -375,6 +378,8 @@ AddToMenu RootConfig
 + "EdgeScroll Off"          EdgeScroll 0 0
 + "Titles On"               Style * Title
 + "Titles Off"              Style * !Title
++ "FvwmIconMan On"          Module FvwmIconMan
++ "FvwmIconMan Off"         KillModule FvwmIconMan
 + ""                        Nop
 + "Edit &fvwm2 config"      Exec exec xterm -e vim ~/.fvwm/config
 + ""                        Nop
@@ -418,6 +423,7 @@ AddToMenu RootPrograms
 DestroyFunc StartFunction
 AddToFunc StartFunction
 + I Module FvwmPager * *
++ I Module FvwmIconMan
 + I Test (Init) Exec exec xclock -name xcdigital
 + I Test (Init) Exec exec xload
 
@@ -512,11 +518,11 @@ DestroyModuleConfig FvwmIconMan: *
 *FvwmIconMan: Resolution desk
 *FvwmIconMan: UseWinList true
 *FvwmIconMan: TitleButton flat #000000 #dcdad5
-*FvwmIconMan: PlainButton up #000000 #dcdad5
+*FvwmIconMan: PlainButton up #000000 #c4c2bd
 *FvwmIconMan: FocusButton down #ffffff #4b6983
-*FvwmIconMan: SelectButton down #ffffff #4b6983
-*FvwmIconMan: FocusAndSelectButton raisededge #ffffff #4b6983
-*FvwmIconMan: IconButton down #000000 #dcdad5
+*FvwmIconMan: SelectButton sunkedge #ffffff #4b6983 
+*FvwmIconMan: FocusAndSelectButton sunkedge #ffffff #4b6983
+*FvwmIconMan: IconButton raisededge #000000 #c4c2bd
 *FvwmIconMan: Action Mouse 1 N sendcommand Iconify
 *FvwmIconMan: Action Mouse 3 N sendcommand WindowFocusAndRaise
 
