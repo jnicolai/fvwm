@@ -520,7 +520,7 @@ DestroyModuleConfig FvwmIconMan: *
 *FvwmIconMan: TitleButton flat #000000 #dcdad5
 *FvwmIconMan: PlainButton up #000000 #c4c2bd
 *FvwmIconMan: FocusButton down #ffffff #4b6983
-*FvwmIconMan: SelectButton sunkedge #ffffff #4b6983 
+*FvwmIconMan: SelectButton sunkedge #000000 #c4c2bd
 *FvwmIconMan: FocusAndSelectButton sunkedge #ffffff #4b6983
 *FvwmIconMan: IconButton raisededge #000000 #c4c2bd
 *FvwmIconMan: Action Mouse 1 N sendcommand Iconify
