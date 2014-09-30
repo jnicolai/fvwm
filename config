@@ -513,7 +513,7 @@ DestroyModuleConfig FvwmIconMan: *
 *FvwmIconMan: DrawIcons true
 *FvwmIconMan: ReliefThickness 1
 *FvwmIconMan: FollowFocus false
-*FvwmIconMan: ManagerGeometry +0-0
+*FvwmIconMan: ManagerGeometry +0+0
 *FvwmIconMan: MaxButtonWidth 128
 *FvwmIconMan: Resolution desk
 *FvwmIconMan: UseWinList true
@@ -544,7 +544,7 @@ DestroyModuleConfig FvwmPager: *
 *FvwmPager: BalloonStringFormat %i
 *FvwmPager: WindowBorderWidth 1
 *FvwmPager: DeskTopScale 20
-*FvwmPager: Geometry +0+0
+*FvwmPager: Geometry -0-0
 *FvwmPager: Colorset * 14
 *FvwmPager: HilightColorset * 15
 *FvwmPager: WindowColorsets 1 2
