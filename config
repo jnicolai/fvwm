@@ -48,8 +48,8 @@ ColorSet 1  bg #c4c2bd,fg #000000
 ColorSet 2  bg #4b6983,fg #ffffff
 
 # Menus
-ColorSet 5  bg #dcdad5,fg #000000,hi #9e9a91, sh #9e9a91
-ColorSet 6  bg #4b6983,fg #ffffff
+ColorSet 5  bg #dcdad5,fg #000000,hi #9e9a91,sh #9e9a91
+ColorSet 6  bg #4b6983,fg #ffffff,hi #dcdad5,sh #dcdad5
 ColorSet 7  fg #6c6c6c
 
 # Icon Colorset
@@ -133,7 +133,7 @@ MenuStyle * Mwm
 MenuStyle * Font "xft:DejaVu Sans Mono-10"
 MenuStyle * TitleFont "xft:DejaVu Sans Mono-10"
 MenuStyle * HilightBack
-MenuStyle * Hilight3DOff
+MenuStyle * Hilight3DThick
 MenuStyle * TrianglesSolid
 MenuStyle * TrianglesUseFore
 MenuStyle * MenuColorset 5
