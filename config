@@ -109,7 +109,7 @@ Style * IconBackgroundColorset 8
 Style * Icon
 
 # Module Styles
-Style FvwmPager Sticky,WindowListSkip,FixedSize,NoButton 2,NoButton 1,!Title,!Handles
+Style FvwmPager Sticky,WindowListSkip,FixedSize,NoButton 2,NoButton 1,!Title,!Handles,!IndexedWindowName
 Style FvwmPager IconOverride, Icon odesk.xpm
 Style FvwmIconMan Sticky,!Title,WindowListSkip,!Handles,NeverFocus
 
@@ -121,7 +121,7 @@ Style XLoad Sticky,WindowListSkip,CirculateSkip,!Title,!Handles
 Style xosview Sticky,WindowListSkip,CirculateSkip
 Style XTerm GrabFocus
 Style XTerm MiniIcon 16x16/apps/terminal.png
-Style XTerm Icon 48x48/apps/terminal.png
+Style XTerm Icon 48x48/apps/terminal.png,IconOverride
 Style rdesktop Icon 48x48/places/network-server.png
 Style rdesktop MiniIcon 16x16/places/network-server.png
 
@@ -391,20 +391,17 @@ DestroyMenu RootPrograms
 AddToMenu RootPrograms
 + "Programs"      Title
 + "&Chromium"     Exec exec chromium
-+ "&Dia"          Exec exec dia
++ "&Firefox"      Exec exec firefox
 + "G&eeqie"       Exec exec geeqie
 + "&GIMP"         Exec exec gimp
 + "G&Vim"         Exec exec gvim
-+ "&IceWeasel"    Exec exec iceweasel
-+ "&KeePassX"     Exec exec keepassx
-+ "&Leafpad"      Exec exec leafpad
 + "Libre&Office"  Exec exec libreoffice
 + "LX&appearance" Exec exec lxappearance
-+ "LX&randr"      Exec exec lxrandr
 + "&Nitrogen"     Exec exec nitrogen
 + "x&calc"        Exec exec xcalc
 + "xclip&board"   Exec exec xclipboard
 + "x&man"         Exec exec xman
++ "&xosview"      Exec exec xosview
 + "X&pdf"         Exec exec xpdf
 
 ###############################################################################
