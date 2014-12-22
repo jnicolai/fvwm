@@ -12,10 +12,10 @@ DestroyModuleConfig FvwmForm-Quit: *
 *FvwmForm-Quit: Button quit "Quit" ^M
 *FvwmForm-Quit: Command quit
 *FvwmForm-Quit: Button quit "Suspend"
-*FvwmForm-Quit: Command Exec exec gksudo pm-suspend
+*FvwmForm-Quit: Command Exec exec sudo /usr/sbin/pm-suspend
 *FvwmForm-Quit: Button quit "Reboot"
-*FvwmForm-Quit: Command Exec exec gksudo "shutdown -r now"
+*FvwmForm-Quit: Command Exec exec sudo /sbin/shutdown -r now
 *FvwmForm-Quit: Button quit "Halt"
-*FvwmForm-Quit: Command Exec exec gksudo "shutdown -h now"
+*FvwmForm-Quit: Command Exec exec sudo /sbin/shutdown -h now
 *FvwmForm-Quit: Button quit "Cancel" ^[
 *FvwmForm-Quit: Command nop
