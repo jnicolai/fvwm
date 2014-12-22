@@ -132,8 +132,8 @@ MenuStyle * TitleFont "xft:DejaVu Sans Mono-10"
 MenuStyle * TrianglesSolid
 MenuStyle * TrianglesUseFore
 MenuStyle * MenuColorset 5
-MenuStyle * ActiveColorset 6
-MenuStyle * GreyedColorset 7
+#MenuStyle * ActiveColorset 6
+#MenuStyle * GreyedColorset 7
 
 ButtonStyle 1 - MwmDecorMenu
 ButtonStyle 4 - Clear MwmDecorMin MwmDecorShade
