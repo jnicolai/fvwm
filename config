@@ -23,7 +23,7 @@ DesktopName 9 Workspace 10
 DesktopName 10 Workspace 11
 DesktopName 11 Workspace 12
 
-EdgeResistance -1
+EdgeResistance 250
 EdgeScroll 100 100
 EdgeThickness 1
 ClickTime 350
@@ -39,64 +39,67 @@ BugOpts FlickeringMoveWorkAround On
 ###############################################################################
 #                                                                     COLORSETS
 ###############################################################################
+# {{{
 # Default Colorset
 ColorSet 0  bg #c4c4c4,fg #000000,sh #6c6c6c, hi #e6e6e6
 
 # Windows
-ColorSet 1  bg #d3d3d3,fg #000000
-ColorSet 2  bg #5f9ea0,fg #ffffff
+ColorSet 1  bg #d3d3d3,fg #000000,hi #ececec,sh #767676
+ColorSet 2  bg #5f9ea0,fg #ffffff,hi #b7d3d4,sh #2f4f50
 
 # Menus
-ColorSet 5  bg #c4c4c4,fg #000000,hi #e6e6e6, sh #6c6c6c
-ColorSet 6  bg #a7a7a7,fg #000000
-ColorSet 7  fg #6c6c6c
+ColorSet 3  bg #c4c4c4,fg #000000,hi #e6e6e6, sh #6c6c6c
+ColorSet 4  bg #a7a7a7,fg #000000
+ColorSet 5  fg #6c6c6c
 
-# Icon Colorset
-ColorSet 8  bg #d3d3d3,fg #000000,pixmap mwm_icon_bg_trans.png,hi #ededed,sh #767676
-
-# FvwmButtons
-ColorSet 10 bg #c4c4c4,fg #000000
-
-# FvwmForm
-ColorSet 11 bg #c4c4c4,fg #000000,sh #6c6c6c,hi #e6e6e6
+# Icon Background Colorset
+ColorSet 6  bg #d3d3d3,fg #000000,pixmap mwm_icon_bg_trans.png,hi #ececec,sh #767676
 
 # FvwmPager
-ColorSet 14 bg #a7a7a7,fg #000000
-ColorSet 15 bg #e6e6e6,fg #000000
-ColorSet 16 bg #e6e6e6,fg #000000
+ColorSet 8  bg #a7a7a7,fg #000000
+ColorSet 9  bg #e6e6e6,fg #000000
+ColorSet 10 bg #e6e6e6,fg #000000
 
+# }}}
 ###############################################################################
 #                                                                        STYLES
 ###############################################################################
+# {{{
+Style * EdgeMoveDelay 0
+Style * EdgeResizeDelay -1
+Style * EdgeMoveResistance 100
+Style * TileCascadePlacement
+Style * GNOMEIgnoreHints
+Style * SloppyFocus
+Style * CirculateSkipIcon,CirculateSkipShaded
+Style * DecorateTransient
+#Style * SnapAttraction 5 SameType Screen
+#Style * ResizeHintOverride
+
 DefaultColorset 0
 DefaultFont "xft:DejaVu Sans Mono-10"
-TitleStyle Centered Height 17
-Emulate Mwm
-BorderStyle Simple
-DefaultIcon mwm_unknown_trans.png
 
+TitleStyle Centered Height 17
+BorderStyle Simple
+ButtonStyle 1 - MwmDecorMenu
+ButtonStyle 4 - Clear MwmDecorMin MwmDecorShade
+ButtonStyle 2 - Clear MwmDecorMax
+
+Emulate Mwm
 Style * MwmButtons,MwmBorder
 Style * MwmFunctions,MwmDecor
+
 Style * HandleWidth 7,BorderWidth 7
 Style * Colorset 1
 Style * HilightColorset 2
 Style * BorderColorset 1
 Style * HilightBorderColorset 2
-Style * EdgeMoveDelay 0
-Style * EdgeResizeDelay -1
-Style * EdgeMoveResistance 100
-Style * TileCascadePlacement
-Style * DecorateTransient
-Style * GNOMEIgnoreHints
 Style * IndexedWindowName
 Style * WindowShadeSteps 0
-Style * SloppyFocus
-#Style * SnapAttraction 5 SameType Screen
-Style * CirculateSkipIcon,CirculateSkipShaded
-#Style * ResizeHintOverride
-Style * StickyAcrossPagesIcon
+Style * Font "xft:DejaVu Sans Mono-10"
 
 # Icon Styles
+DefaultIcon mwm_unknown_trans.png
 Style * IconTitle
 Style * IconBox 7 -87 -0 -0,IconFill left top,IconGrid 1 1
 Style * IconSize 50 50
@@ -105,13 +108,12 @@ Style * IconBackgroundRelief 2,IconTitleRelief 2,IconBackgroundPadding 4
 Style * IconFont "xft:DejaVu Sans Mono-8"
 Style * IconTitleColorset 1
 Style * HilightIconTitleColorset 2
-Style * IconBackgroundColorset 8
+Style * IconBackgroundColorset 6
 Style * Icon
 
 # Module Styles
-Style FvwmPager Sticky,WindowListSkip,FixedSize,NoButton 2,NoButton 1,!Title,!Handles,!IndexedWindowName
-Style FvwmPager IconOverride, Icon odesk.xpm
-Style FvwmIconMan Sticky,!Title,WindowListSkip,!Handles,NeverFocus
+Style FvwmPager Sticky,WindowListSkip,FixedSize,NoButton 2,NoButton 1,\
+                !Title,!Handles,!IndexedWindowName
 
 # Program Styles
 Style Gmrun StaysOnTop,FixedSize,FixedPosition,GrabFocus,Sticky,!Title,!Handles
@@ -131,17 +133,15 @@ MenuStyle * Font "xft:DejaVu Sans Mono-10"
 MenuStyle * TitleFont "xft:DejaVu Sans Mono-10"
 MenuStyle * TrianglesSolid
 MenuStyle * TrianglesUseFore
-MenuStyle * MenuColorset 5
-#MenuStyle * ActiveColorset 6
-#MenuStyle * GreyedColorset 7
+MenuStyle * MenuColorset 3
+#MenuStyle * ActiveColorset 4
+#MenuStyle * GreyedColorset 5
 
-ButtonStyle 1 - MwmDecorMenu
-ButtonStyle 4 - Clear MwmDecorMin MwmDecorShade
-ButtonStyle 2 - Clear MwmDecorMax
-
+# }}}
 ###############################################################################
 #                                                                      BINDINGS
 ###############################################################################
+# {{{
 Key F1  A 4 GotoDesk 0 0
 Key F2  A 4 GotoDesk 0 1
 Key F3  A 4 GotoDesk 0 2
@@ -241,25 +241,15 @@ Key 2 A 4 Menu WindowOps Interior 0 0
 Key 3 A 4 WindowList Root c c NoCurrentDeskTitle,TitleForAllDesks
 Key 3 A 4C WindowList Root c c CurrentDesk,OnlyIcons
 
-Key F1          A       M    Exec exec xterm
-Key F2          A       M    Exec exec gmrun
-Key F3          A       M    RaiseLower
-Key F4          A       M    Close
-Key F6          A       M    Stick
-Key F7          A       M    Move
-Key F8          A       M    Resize
-Key F9          A       M    Iconify
-Key F10         A       M    Maximize
-
-Key N A 4C Next (Iconic,CirculateHitIcon) Iconify false
-Key N A 4 Iconify
-Key M A 4 Maximize
-
-# Directional Focusing
-Key H A 4 Direction West  (CurrentPage,AcceptsFocus) Focus
-Key J A 4 Direction South (CurrentPage,AcceptsFocus) Focus
-Key K A 4 Direction North (CurrentPage,AcceptsFocus) Focus
-Key L A 4 Direction East  (CurrentPage,AcceptsFocus) Focus
+Key F1  A M Exec exec xterm
+Key F2  A M Exec exec gmrun
+Key F3  A M RaiseLower
+Key F4  A M Close
+Key F6  A M Stick
+Key F7  A M Move
+Key F8  A M Resize
+Key F9  A M Iconify
+Key F10 A M Maximize
 
 # Window List
 Key Tab A 4  Next (!Iconic,AcceptsFocus,CurrentPage) Function WindowFocusAndRaise
@@ -299,9 +289,13 @@ Mouse 5 W M Lower
 Mouse 1 I N Function IconMoveOrDeIconify
 Mouse 3 I N Popup WindowOPS
 
+Mouse 3 W 4 Current (XTerm) Popup TermResize
+
+# }}}
 ###############################################################################
 #                                                                         MENUS
 ###############################################################################
+# {{{
 # Windows Operations Menu
 DestroyMenu WindowOPS
 AddToMenu WindowOPS
@@ -327,19 +321,19 @@ AddToMenu WindowOPS
 DestroyMenu DesktopRootMenu
 AddToMenu DesktopRootMenu
 PipeRead "echo -n \"+ $(hostname) Title Top\""
-+ "&1. XTerm"      Exec exec xterm
-+ "&2. Firefox"    Exec exec firefox
-+ "&3. Xfe"        Exec exec xfe
-+ ""               Nop
-+ "&Programs"      Popup RootPrograms
-+ "&Terminals"     Popup RootTerminals
-+ "R&emote Hosts"  Popup RootRemote
-+ "&Workspace"     Popup RootWorkspace
-+ "&Configuration" Popup RootConfig
-+ ""               Nop
-+ "&Lock Screen"   Exec exec xscreensaver-command -lock
-+ "&Restart FVWM"  Restart
-+ "&Quit Fvwm..."  FvwmForm FvwmForm-Quit
++ "&1. XTerm"               Exec exec xterm
++ "&2. Firefox"             Exec exec firefox
++ "&3. Midnight Commander"  Exec exec xterm -e mc
++ ""                        Nop
++ "&Programs"               Popup RootPrograms
++ "&Terminals"              Popup RootTerminals
++ "R&emote Hosts"           Popup RootRemote
++ "&Workspace"              Popup RootWorkspace
++ "&Configuration"          Popup RootConfig
++ ""                        Nop
++ "&Lock Screen"            Exec exec xscreensaver-command -lock
++ "&Restart FVWM"           Restart
++ "&Quit Fvwm..."           FvwmForm FvwmForm-Quit
 
 DestroyMenu RootTerminals
 AddToMenu RootTerminals
@@ -397,16 +391,26 @@ AddToMenu RootPrograms
 + "G&Vim"         Exec exec gvim
 + "Libre&Office"  Exec exec libreoffice
 + "LX&appearance" Exec exec lxappearance
-+ "&Nitrogen"     Exec exec nitrogen
+#+ "&Nitrogen"     Exec exec nitrogen
 + "x&calc"        Exec exec xcalc
 + "xclip&board"   Exec exec xclipboard
 + "x&man"         Exec exec xman
 + "&xosview"      Exec exec xosview
 + "X&pdf"         Exec exec xpdf
 
+DestroyMenu TermResize
+AddToMenu TermResize
++ "Terminal Size"   Title
++ "80x25"           Resize 80c 25c
++ "100x50"          Resize 100c 50c
++ "132x43"          Resize 132c 43c
++ "132x60"          Resize 132c 60c
+
+# }}}
 ###############################################################################
 #                                                                     FUNCTIONS
 ###############################################################################
+# {{{
 
 # StartFunction
 ###############################################################################
@@ -426,8 +430,8 @@ AddToFunc WindowListFunc
 
 DestroyFunc IconMoveOrDeIconify
 AddToFunc IconMoveOrDeIconify
-+ M Move
 + C Iconify off
+#+ M Move
 
 DestroyFunc PushWindowToEdge
 AddToFunc PushWindowToEdge
@@ -442,6 +446,11 @@ AddToFunc WindowMoveOrRaiseLower
 + M Move
 + C RaiseLower
 
+DestroyFunc WindowResize
+AddToFunc   WindowResize 
++ M Resize Direction SouthEast warptoborder
++ C Resize
+
 DestroyFunc FrameResizeOrRaiseLower
 AddToFunc FrameResizeOrRaiseLower
 + M Resize
@@ -451,11 +460,6 @@ DestroyFunc FrameMoveOrRaiseLower
 AddToFunc FrameMoveOrRaiseLower
 + M Move
 + C RaiseLower
-
-DestroyFunc WindowResize
-AddToFunc   WindowResize 
-+ M Resize Direction SouthEast warptoborder
-+ C Resize
 
 DestroyFunc FollowWindowToPage
 AddToFunc FollowWindowToPage
@@ -492,29 +496,11 @@ AddToFunc ChangeDesktopName
 + I Exec sed -i "s/^\(DesktopName $[desk.n]\) .\+/\1 $0/"\
 	 $[FVWM_USERDIR]/fvwmrc_desktops
 
+# }}}
 ###############################################################################
 #                                                                       MODULES
 ###############################################################################
-DestroyModuleConfig FvwmIconMan: *
-*FvwmIconMan: Font "xft:DejaVu Sans-10:Style=Book"
-*FvwmIconMan: NumManagers 1
-*FvwmIconMan: ShowOnlyIcons false
-*FvwmIconMan: DrawIcons true
-*FvwmIconMan: ReliefThickness 1
-*FvwmIconMan: FollowFocus false
-*FvwmIconMan: ManagerGeometry +0-0
-*FvwmIconMan: MaxButtonWidth 128
-*FvwmIconMan: Resolution desk
-*FvwmIconMan: UseWinList true
-*FvwmIconMan: TitleButton flat #000000 #dcdad5
-*FvwmIconMan: PlainButton up #000000 #dcdad5
-*FvwmIconMan: FocusButton down #ffffff #4b6983
-*FvwmIconMan: SelectButton down #ffffff #4b6983
-*FvwmIconMan: FocusAndSelectButton raisededge #ffffff #4b6983
-*FvwmIconMan: IconButton down #000000 #dcdad5
-*FvwmIconMan: Action Mouse 1 N sendcommand Iconify
-*FvwmIconMan: Action Mouse 3 N sendcommand WindowFocusAndRaise
-
+# {{{
 DestroyModuleConfig FvwmPager: *
 #*FvwmPager: Window3DBorders
 #*FvwmPager: SolidSeparators
@@ -534,8 +520,9 @@ DestroyModuleConfig FvwmPager: *
 *FvwmPager: WindowBorderWidth 1
 *FvwmPager: DeskTopScale 20
 *FvwmPager: Geometry +0+0
-*FvwmPager: Colorset * 14
-*FvwmPager: HilightColorset * 15
+*FvwmPager: Colorset * 8
+*FvwmPager: HilightColorset * 9
 *FvwmPager: WindowColorsets 1 2
-*FvwmPager: BalloonColorset * 16
+*FvwmPager: BalloonColorset * 10
+# }}}
 ### END OF FILE ###############################################################
