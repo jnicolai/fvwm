@@ -1,10 +1,6 @@
 ###############################################################################
 #                                                                  INITIALSETUP
 ###############################################################################
-#ImagePath $[FVWM_USERDIR]/icons:$[FVWM_USERDIR]/wm-icons:+
-ImagePath /usr/share/icons/gnome:+
-ImagePath /usr/share/icons/Mist:+
-ImagePath /usr/share/icons/hicolor:+
 ImagePath $[FVWM_USERDIR]/icons:+
 
 DesktopSize 2x2
@@ -122,10 +118,10 @@ Style xcdigital Sticky,WindowListSkip,CirculateSkip,!Title,!Handles
 Style XLoad Sticky,WindowListSkip,CirculateSkip,!Title,!Handles
 Style xosview Sticky,WindowListSkip,CirculateSkip
 Style XTerm GrabFocus
-Style XTerm MiniIcon 16x16/apps/terminal.png
-Style XTerm Icon 48x48/apps/terminal.png,IconOverride
-Style rdesktop Icon 48x48/places/network-server.png
-Style rdesktop MiniIcon 16x16/places/network-server.png
+Style XTerm MiniIcon mini-terminal.png
+Style XTerm Icon terminal.png,IconOverride
+Style rdesktop Icon server.png
+Style rdesktop MiniIcon mini-server.png
 
 # MenuStyle
 MenuStyle * Mwm
@@ -188,18 +184,18 @@ Key bracketright A 4C MoveToDesk  1 0 11
 Key bracketleft  A 4S Function FollowWindowToDesk -1 0 11
 Key bracketright A 4S Function FollowWindowToDesk  1 0 11
 
-Key Left 	A 4  GotoPage -1w  0w
-Key Up 		A 4  GotoPage  0w -1w
-Key Right 	A 4  GotoPage  1w  0w
-Key Down 	A 4  GotoPage  0w  1w
-Key Left 	A 4C MoveToPage -1w  0w
-Key Up 		A 4C MoveToPage  0w -1w
-Key Right 	A 4C MoveToPage  1w  0w
-Key Down 	A 4C MoveToPage  0w  1w
-Key Left 	A 4S Function FollowWindowToPage -1p  0p
-Key Up 		A 4S Function FollowWindowToPage  0p -1p
-Key Right 	A 4S Function FollowWindowToPage  1p  0p
-Key Down 	A 4S Function FollowWindowToPage  0p  1p
+Key h A 4  GotoPage -1w  0w
+Key k A 4  GotoPage  0w -1w
+Key l A 4  GotoPage  1w  0w
+Key j A 4  GotoPage  0w  1w
+Key h A 4C MoveToPage -1w  0w
+Key k A 4C MoveToPage  0w -1w
+Key l A 4C MoveToPage  1w  0w
+Key j A 4C MoveToPage  0w  1w
+Key h A 4S Function FollowWindowToPage -1p  0p
+Key k A 4S Function FollowWindowToPage  0p -1p
+Key l A 4S Function FollowWindowToPage  1p  0p
+Key j A 4S Function FollowWindowToPage  0p  1p
 
 # Multimedia Controls
 Key XF86AudioRaiseVolume A N Exec exec amixer -- set Master 3dB+
