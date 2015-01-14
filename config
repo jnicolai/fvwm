@@ -321,7 +321,7 @@ AddToMenu DesktopRootMenu
 PipeRead "echo -n \"+ $(hostname) Title Top\""
 + "&1. XTerm"               Exec exec xterm
 + "&2. Firefox"             Exec exec firefox
-+ "&3. Midnight Commander"  Exec exec xterm -e mc
++ "&3. mc"                  Exec exec xterm -e mc
 + ""                        Nop
 + "&Programs"               Popup RootPrograms
 + "&Terminals"              Popup RootTerminals

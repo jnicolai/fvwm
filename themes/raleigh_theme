@@ -17,13 +17,15 @@ ColorSet 8  bg #9c9a94,fg #000000
 ColorSet 9  bg #eeebe7,fg #000000 
 ColorSet 10 bg #9c9a94,fg #000000
 
-TitleStyle Centered Height 20
+TitleStyle Centered Height 16
 
 Style * HandleWidth 4,BorderWidth 4
 Style * IconTitleRelief 1
 Style * IconBackgroundRelief 1
+Style * Font "xft:DejaVu Sans Mono-8"
 
 MenuStyle * ActiveColorset 4
 MenuStyle * BorderWidth 1
 MenuStyle * HilightBack
 MenuStyle * Hilight3DThickness 1
+MenuStyle * Font "xft:DejaVu Sans Mono-8"
