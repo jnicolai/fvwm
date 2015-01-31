@@ -1,7 +1,7 @@
 DestroyModuleConfig FvwmForm-VNC: *
 *FvwmForm-VNC: WarpPointer
-*FvwmForm-VNC: Colorset 10
-*FvwmForm-VNC: ItemColorset 11
+*FvwmForm-VNC: Colorset 3
+*FvwmForm-VNC: ItemColorset 3
 *FvwmForm-VNC: Title "VNC Connection"
 *FvwmForm-VNC: Line expand
 *FvwmForm-VNC: Text "Server:"

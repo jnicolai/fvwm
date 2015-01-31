@@ -1,7 +1,7 @@
 DestroyModuleConfig FvwmForm-Quit: *
 *FvwmForm-Quit: WarpPointer
-*FvwmForm-Quit: Colorset 10
-*FvwmForm-Quit: ItemColorset 11
+*FvwmForm-Quit: Colorset 3
+*FvwmForm-Quit: ItemColorset 3
 *FvwmForm-Quit: Title "Quit Fvwm?"
 *FvwmForm-Quit: Line expand
 *FvwmForm-Quit: Text "QUIT Fvwm?"
@@ -11,11 +11,5 @@ DestroyModuleConfig FvwmForm-Quit: *
 *FvwmForm-Quit: Line center
 *FvwmForm-Quit: Button quit "Quit" ^M
 *FvwmForm-Quit: Command quit
-*FvwmForm-Quit: Button quit "Suspend"
-*FvwmForm-Quit: Command Exec exec sudo /usr/sbin/pm-suspend
-*FvwmForm-Quit: Button quit "Reboot"
-*FvwmForm-Quit: Command Exec exec sudo /sbin/shutdown -r now
-*FvwmForm-Quit: Button quit "Halt"
-*FvwmForm-Quit: Command Exec exec sudo /sbin/shutdown -h now
 *FvwmForm-Quit: Button quit "Cancel" ^[
 *FvwmForm-Quit: Command nop

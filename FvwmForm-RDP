@@ -1,7 +1,7 @@
 DestroyModuleConfig FvwmForm-RDP: *
 *FvwmForm-RDP: WarpPointer
-*FvwmForm-RDP: Colorset 10
-*FvwmForm-RDP: ItemColorset 11
+*FvwmForm-RDP: Colorset 3
+*FvwmForm-RDP: ItemColorset 3
 *FvwmForm-RDP: Title "Remote Desktop Connection (RDP)"
 *FvwmForm-RDP: Line expand
 *FvwmForm-RDP: Text "Server:"

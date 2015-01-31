@@ -108,8 +108,12 @@ Style * IconBackgroundColorset 6
 Style * Icon
 
 # Module Styles
-Style FvwmPager Sticky,WindowListSkip,FixedSize,NoButton 2,NoButton 1,\
+Style FvwmPager Sticky,WindowListSkip,FixedSize,!Button 2,!Button 1,\
                 !Title,!Handles,!IndexedWindowName
+
+Style FvwmForm-Quit Sticky,FixedSize,!Handles,!IndexedWindowName,\
+                    WindowListSkip,!Button 2,!Button 1,!Button 4,\
+                    Layer 7,FixedSize,FixedPosition,GrabFocus
 
 # Program Styles
 Style Gmrun StaysOnTop,FixedSize,FixedPosition,GrabFocus,Sticky,!Title,!Handles
@@ -227,7 +231,7 @@ Key D A 4 Function QuickTile 50 100 -0 0
 Key Z A 4 Function QuickTile 50 50 0 -0
 Key X A 4 Function QuickTile 100 50 0 -0
 Key C A 4 Function QuickTile 50 50 -0 -0
-Key S A 4 ResizeMove 50 50 50-50w 50-50w Warp
+Key S A 4 ResizeMove 50 50 50-50w 50-50w 
 
 Key Return A 4 Current Function MasterTile 
 
@@ -424,7 +428,7 @@ AddToFunc WindowListFunc
 + I Iconify off
 + I FlipFocus
 + I Raise
-+ I WarpToWindow 50 50
+#+ I WarpToWindow 50 50
 
 DestroyFunc IconMoveOrDeIconify
 AddToFunc IconMoveOrDeIconify
@@ -473,7 +477,7 @@ DestroyFunc WindowFocusAndRaise
 AddToFunc WindowFocusAndRaise
 + I Focus
 + I Raise
-+ I WarpToWindow 50 50
+#+ I WarpToWindow 50 50
 
 DestroyFunc MasterTile
 AddToFunc MasterTile
