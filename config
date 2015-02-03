@@ -1,6 +1,7 @@
 ###############################################################################
 #                                                                  INITIALSETUP
 ###############################################################################
+# {{{
 ImagePath $[FVWM_USERDIR]/icons:+
 
 DesktopSize 2x2
@@ -27,6 +28,8 @@ MoveThreshold 3
 OpaqueMoveSize -1
 IgnoreModifiers L25
 BugOpts FlickeringMoveWorkAround On
+
+# }}}
 
 ###############################################################################
 #                                                                        SETENV
@@ -324,7 +327,7 @@ DestroyMenu DesktopRootMenu
 AddToMenu DesktopRootMenu
 PipeRead "echo -n \"+ $(hostname) Title Top\""
 + "&1. XTerm"               Exec exec xterm
-+ "&2. Firefox"             Exec exec firefox
++ "&2. Seamonkey"           Exec exec seamonkey
 + "&3. mc"                  Exec exec xterm -e mc
 + ""                        Nop
 + "&Programs"               Popup RootPrograms
@@ -386,14 +389,14 @@ AddToMenu RootRemote
 DestroyMenu RootPrograms
 AddToMenu RootPrograms
 + "Programs"      Title
-+ "&Chromium"     Exec exec chromium
 + "&Firefox"      Exec exec firefox
 + "G&eeqie"       Exec exec geeqie
 + "&GIMP"         Exec exec gimp
 + "G&Vim"         Exec exec gvim
 + "Libre&Office"  Exec exec libreoffice
-+ "LX&appearance" Exec exec lxappearance
+#+ "LX&appearance" Exec exec lxappearance
 #+ "&Nitrogen"     Exec exec nitrogen
++ "&Seamonkey"    Exec exec seamonkey
 + "x&calc"        Exec exec xcalc
 + "xclip&board"   Exec exec xclipboard
 + "x&man"         Exec exec xman
