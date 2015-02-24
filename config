@@ -93,7 +93,6 @@ Style * Colorset 1
 Style * HilightColorset 2
 Style * BorderColorset 1
 Style * HilightBorderColorset 2
-Style * IndexedWindowName
 Style * WindowShadeSteps 0
 Style * Font "xft:DejaVu Sans Mono-8"
 
@@ -108,12 +107,12 @@ Style * NoIcon
 
 # Module Styles
 Style FvwmPager Sticky,WindowListSkip,FixedSize,!Button 2,!Button 1,\
-                !Title,!Handles,!IndexedWindowName
+                !Title,!Handles
 
-Style FvwmForm-Quit Sticky,FixedSize,!Handles,!IndexedWindowName,\
+Style FvwmForm-Quit Sticky,FixedSize,!Handles,\
                     WindowListSkip,!Button 2,!Button 1,!Button 4,\
                     Layer 7,FixedSize,FixedPosition,GrabFocus
-Style FvwmIconMan Sticky,WindowListSkip,FixedSize,!Handles,!IndexedWindowName,\
+Style FvwmIconMan Sticky,WindowListSkip,FixedSize,!Handles,\
                   !Title,CirculateSkip,NeverFocus
 
 # Program Styles
@@ -367,6 +366,10 @@ AddToMenu RootConfig
 + "EdgeScroll Off"          EdgeScroll 0 0
 + "Titles On"               Style * Title
 + "Titles Off"              Style * !Title
++ "FvwmIconMan"             Module FvwmIconMan
++ "Kill FvwmIconMan"        KillModule FvwmIconMan
++ "FvwmPager"               Module FvwmPager * *
++ "Kill FvwmPager"          KillModule FvwmPager
 + ""                        Nop
 + "Edit &fvwm2 config"      Exec exec xterm -e vim ~/.fvwm/config
 + ""                        Nop
@@ -497,6 +500,10 @@ AddToFunc ChangeDesktopName
 + I Exec sed -i "s/^\(DesktopName $[desk.n]\) .\+/\1 $0/"\
 	 $[FVWM_USERDIR]/fvwmrc_desktops
 
+DestroyFunc MoveWindowToLocalPage
+AddToFunc MoveWindowToLocalPage
++ I MoveToPage $[page.nx] $[page.ny]
+
 # }}}
 ###############################################################################
 #                                                                       MODULES
@@ -542,5 +549,9 @@ DestroyModuleConfig FvwmIconman: *
 *FvwmIconMan:   IconButton RaisedEdge #000000 #c4c2bd
 *FvwmIconMan:   SelectButton SunkEdge #000000 #c4c2bd
 *FvwmIconMan:   Reverse none
+*FvwmIconMan:   Action Mouse 1 N sendcommand Iconify
+*FvwmIconMan:   Action Mouse 2 N sendcommand "Function MoveWindowToLocalPage"
+*FvwmIconMan:   Action Mouse 3 N sendcommand FlipFocus
+#*FvwmIconMan:   Action Select sendcommand Focus
 # }}}
 ### END OF FILE ###############################################################
