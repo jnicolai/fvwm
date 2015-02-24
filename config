@@ -123,13 +123,6 @@ Style xcdigital Sticky,WindowListSkip,CirculateSkip,!Title,!Handles
 Style XLoad Sticky,WindowListSkip,CirculateSkip,!Title,!Handles
 Style xosview Sticky,WindowListSkip,CirculateSkip
 Style XTerm GrabFocus
-Style XTerm MiniIcon mini-terminal.png
-Style XTerm Icon terminal.png,IconOverride
-Style rdesktop Icon server.png
-Style rdesktop MiniIcon mini-server.png
-
-# Because we use FvwmIconMan
-Style * NoIcon
 
 # MenuStyle
 MenuStyle * Mwm
@@ -142,7 +135,7 @@ MenuStyle * ActiveColorset 4
 MenuStyle * BorderWidth 1
 MenuStyle * HilightBack
 MenuStyle * Hilight3DThickness 1
-#MenuStyle * GreyedColorset 5
+MenuStyle * GreyedColorset 5
 
 # }}}
 ###############################################################################
