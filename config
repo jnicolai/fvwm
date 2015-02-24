@@ -76,7 +76,7 @@ Style * DecorateTransient
 #Style * ResizeHintOverride
 
 DefaultColorset 0
-DefaultFont "xft:DejaVu Sans Mono-10"
+DefaultFont "xft:DejaVu Sans Mono-8"
 
 TitleStyle Centered Height 16
 BorderStyle Simple
