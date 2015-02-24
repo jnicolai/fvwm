@@ -4,7 +4,7 @@
 # {{{
 ImagePath $[FVWM_USERDIR]/icons:+
 
-DesktopSize 2x2
+DesktopSize 3x2
 
 # Fvwm2 Desktop Names
 DesktopName 0 Workspace 1
@@ -431,7 +431,7 @@ AddToFunc WindowListFunc
 + I Iconify off
 + I FlipFocus
 + I Raise
-#+ I WarpToWindow 50 50
++ I WarpToWindow 50 50
 
 DestroyFunc IconMoveOrDeIconify
 AddToFunc IconMoveOrDeIconify
@@ -480,7 +480,7 @@ DestroyFunc WindowFocusAndRaise
 AddToFunc WindowFocusAndRaise
 + I Focus
 + I Raise
-#+ I WarpToWindow 50 50
++ I WarpToWindow 50 50
 
 DestroyFunc MasterTile
 AddToFunc MasterTile
@@ -523,7 +523,7 @@ DestroyModuleConfig FvwmPager: *
 *FvwmPager: BalloonBorderWidth 1
 *FvwmPager: BalloonStringFormat %i
 *FvwmPager: WindowBorderWidth 1
-*FvwmPager: DeskTopScale 20
+*FvwmPager: DeskTopScale 24
 *FvwmPager: Geometry +0+0
 *FvwmPager: Colorset * 8
 *FvwmPager: HilightColorset * 9
